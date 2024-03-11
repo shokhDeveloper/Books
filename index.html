@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Books</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site__header">
+      <div class="container">
+        <div class="site__header-inner">
+          <h1 class="site__header-title">Online Books</h1>
+        </div>
+      </div>
+    </header>
+    
+    <template class="js-book-temp">
+        <li class="hero__boks-item book">
+            <img
+              class="book__image js-book-image"
+              src="./assets/images/a-la-recherche-du-temps-perdu.jpg"
+              width="300"
+              height="300"
+              alt=""
+            />
+            <div class="book__info">
+                <h3 class="book__name js-book-name">Name</h3>
+                <h4 class="book__avtor js-book-avtor">Avtor</h4>
+                <div class="book__inner">
+                  <span class="book__year js-book-year">1950</span>
+                  <span class="book__pages js-book-pages">208</span>
+                  <span class="book__language js-book-language">English</span>
+                </div>
+                <div class="book__btns">
+                    <a class="js-wiki-link" href="" target="_blank">Wiki book</a>
+                    <button class="js-bookmark-btn">Add bookmark</button>
+                </div>
+            </div>
+          </li>
+    </template>
+    <template class="js-bookmarked-data">
+        <li class="sidebar__item">
+            <img class="js-book-image" src="./assets/images/absalom-absalom.jpg" height="150" width="150" alt="">
+            <div class="sitebar__item-inner">
+                <h4 class="js-book-name">Book name</h4>
+                <h4 class="js-book-avtor">Avtor = Name</h4>
+            </div>
+            <button class="book-del js-book-del">Delete</button>
+        </li>
+    </template>
+    <main>
+      <section class="overlay_bar js-overlay-bar">
+
+      </section>
+      <section class="hero__sidebar js-hero-sidebar">
+        <div class="hero__sidebar-top">
+            <h4>Bookmarks</h4>
+            <button class="js-sidebar-close">&times;</button>
+        </div>
+        <ul class="hero__sidebar-list">
+            
+        </ul>
+      </section>
+      <section class="hero">
+        <div class="container">
+            <button class="hero__bookmark-btn js-bookark-btn"> Bookmark <span class="hero__bookmark-count js-bookmark-count"> 0 </span></button>
+          <div class="hero__form-box">
+            <form class="hero__form js-books-form">
+              <div class="hero__form-inner">
+                <input
+                  class="hero__form-input js-book-search"
+                  type="text"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="search"
+                  />
+                <button>Search</button>
+              </div>
+              <select
+                class="hero__form-sort js-book-sort"
+                aria-label="Sort-books"
+                id="sort"
+                >
+                <option value="" hidden>Sort Books</option>
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+              </select>
+              <input
+                class="hero__form-year-input js-book-year"
+                type="text"
+                placeholder="Year"
+                aria-label="Year"
+                id="year"
+                />
+              <input
+                class="hero__form-author-input js-book-author"
+                type="text"
+                placeholder="Author"
+                aria-label="Author"
+                id="author"
+              />
+              <select class="hero__form-sort js-book-country" aria-label="Country-books" id="country">
+                <option value="all">All</option>
+              </select>
+            </form>
+          </div>
+          <ul class="hero__boks-list js-books-list">
+            
+
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- scripts -->
+    <script src="/js/books.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
